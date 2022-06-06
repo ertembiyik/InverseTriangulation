@@ -14,8 +14,10 @@
 		211332E9284BDFC70070FD15 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332E8284BDFC70070FD15 /* Renderer.swift */; };
 		211332EB284C072B0070FD15 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332EA284C072B0070FD15 /* MetalView.swift */; };
 		211332ED284C0DDF0070FD15 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 211332EC284C0DDF0070FD15 /* Shaders.metal */; };
-		211332EF284C26920070FD15 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332EE284C26920070FD15 /* Quad.swift */; };
-		211332F1284D35E80070FD15 /*  VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332F0284D35E80070FD15 /*  VertexDescriptor.swift */; };
+		211332EF284C26920070FD15 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332EE284C26920070FD15 /* Cube.swift */; };
+		211332F1284D35E80070FD15 /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332F0284D35E80070FD15 /* VertexDescriptor.swift */; };
+		211332F9284E98050070FD15 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332F8284E98050070FD15 /* Transform.swift */; };
+		211332FB284E98AC0070FD15 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332FA284E98AC0070FD15 /* MathLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,11 @@
 		211332E8284BDFC70070FD15 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		211332EA284C072B0070FD15 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		211332EC284C0DDF0070FD15 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		211332EE284C26920070FD15 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
-		211332F0284D35E80070FD15 /*  VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " VertexDescriptor.swift"; sourceTree = "<group>"; };
+		211332EE284C26920070FD15 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		211332F0284D35E80070FD15 /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		211332F8284E98050070FD15 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		211332FA284E98AC0070FD15 /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		211332FC284E98C90070FD15 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +68,12 @@
 			children = (
 				211332DA284BDFA60070FD15 /* MetalGraphicEngineApp.swift */,
 				211332DC284BDFA60070FD15 /* ContentView.swift */,
-				211332F0284D35E80070FD15 /*  VertexDescriptor.swift */,
+				211332F0284D35E80070FD15 /* VertexDescriptor.swift */,
 				211332E8284BDFC70070FD15 /* Renderer.swift */,
-				211332EE284C26920070FD15 /* Quad.swift */,
+				211332F8284E98050070FD15 /* Transform.swift */,
+				211332EE284C26920070FD15 /* Cube.swift */,
+				211332FA284E98AC0070FD15 /* MathLibrary.swift */,
+				211332FC284E98C90070FD15 /* Common.h */,
 				211332EA284C072B0070FD15 /* MetalView.swift */,
 				211332EC284C0DDF0070FD15 /* Shaders.metal */,
 				211332DE284BDFA80070FD15 /* Assets.xcassets */,
@@ -152,12 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211332EF284C26920070FD15 /* Quad.swift in Sources */,
+				211332EF284C26920070FD15 /* Cube.swift in Sources */,
 				211332EB284C072B0070FD15 /* MetalView.swift in Sources */,
+				211332FB284E98AC0070FD15 /* MathLibrary.swift in Sources */,
 				211332DD284BDFA60070FD15 /* ContentView.swift in Sources */,
 				211332E9284BDFC70070FD15 /* Renderer.swift in Sources */,
-				211332F1284D35E80070FD15 /*  VertexDescriptor.swift in Sources */,
+				211332F1284D35E80070FD15 /* VertexDescriptor.swift in Sources */,
 				211332DB284BDFA60070FD15 /* MetalGraphicEngineApp.swift in Sources */,
+				211332F9284E98050070FD15 /* Transform.swift in Sources */,
 				211332ED284C0DDF0070FD15 /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +231,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalGraphicEngine/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -274,6 +285,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalGraphicEngine/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

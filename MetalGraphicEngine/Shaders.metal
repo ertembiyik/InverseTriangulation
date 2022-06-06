@@ -6,6 +6,7 @@
 //
 
 #include <metal_stdlib>
+#import "Common.h"
 using namespace metal;
 
 struct VertexIn {
@@ -19,25 +20,25 @@ struct VertexOut {
     float pointSize [[point_size]];
 };
 
+#include <metal_stdlib>
+using namespace metal;
+
+
 vertex VertexOut vertex_main(
-                             constant uint &count [[buffer(0)]],
-                             constant float &timer [[buffer(11)]],
-                             uint vertexID [[vertex_id]])
+                             VertexIn in [[stage_in]],
+                             constant Uniforms &uniforms [[buffer(11)]])
 {
-    float radius = 0.8;
-    float pi = 3.14159;
-    float current = float(vertexID) / float(count);
-    float2 position;
-    position.x = radius * cos(2 * pi * current);
-    position.y = radius * sin(2 * pi * current);
+    float4 position =
+    uniforms.projectionMatrix * uniforms.viewMatrix
+    * uniforms.modelMatrix * in.position;
+    
     VertexOut out {
-        .position = float4(position, 0, 1),
-        .color = float4(1, 0, 0, 1),
-        .pointSize = 20
+        .position = position,
+        .color = in.color
     };
     return out;
 }
 
 fragment float4 fragment_main(VertexOut in [[stage_in]]) {
-    return in.color;
+  return in.color;
 }
