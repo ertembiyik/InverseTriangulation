@@ -20,14 +20,8 @@ struct VertexOut {
     float pointSize [[point_size]];
 };
 
-#include <metal_stdlib>
-using namespace metal;
-
-
-vertex VertexOut vertex_main(
-                             VertexIn in [[stage_in]],
-                             constant Uniforms &uniforms [[buffer(11)]])
-{
+vertex VertexOut vertex_main(VertexIn in [[stage_in]], constant Uniforms &uniforms [[buffer(11)]]) {
+    
     float4 position =
     uniforms.projectionMatrix * uniforms.viewMatrix
     * uniforms.modelMatrix * in.position;
@@ -36,9 +30,41 @@ vertex VertexOut vertex_main(
         .position = position,
         .color = in.color
     };
+    
     return out;
 }
 
-fragment float4 fragment_main(VertexOut in [[stage_in]]) {
-  return in.color;
+fragment float4 fragment_main(constant Params &params [[buffer(12)]], VertexOut in [[stage_in]]) {
+    // MARK: Make it colored by the colors from buffer
+    // return in.color;
+
+    // MARK: Color half of the screen
+//    float color = step(params.width * 0.5, in.position.x);
+//
+//    return float4(color, color, color, 1);
+    
+    // MARK: Make a chess-like color
+//    uint checks = 8;
+//    // 1
+//    float2 uv = in.position.xy / params.width;
+//    // 2
+//    uv = fract(uv * checks * 0.5) - 0.5;
+//    // 3
+//    float3 color = step(uv.x * uv.y, 0.0);
+//    return float4(color, 1.0);
+    
+    // MARK: smooth gradient
+//    float color = smoothstep(0, params.width, in.position.x);
+//    return float4(color, color, color, 1);
+    
+    // MARK: mixing colors
+//    float3 red = float3(1, 0, 0);
+//    float3 blue = float3(0, 0, 1);
+//    float3 color = mix(red, blue, 0.3);
+//    return float4(color, 1);
+    
+    float3 color = normalize(in.position.xyz);
+    return float4(color, 1);
+
+    
 }

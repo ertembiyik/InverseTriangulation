@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "211332D6284BDFA60070FD15"
-               BuildableName = "MetalGraphicEngine.app"
+               BuildableName = "InverseTriangulation.app"
                BlueprintName = "InverseTriangulation"
                ReferencedContainer = "container:InverseTriangulation.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "211332D6284BDFA60070FD15"
-            BuildableName = "MetalGraphicEngine.app"
+            BuildableName = "InverseTriangulation.app"
             BlueprintName = "InverseTriangulation"
             ReferencedContainer = "container:InverseTriangulation.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "211332D6284BDFA60070FD15"
-            BuildableName = "MetalGraphicEngine.app"
+            BuildableName = "InverseTriangulation.app"
             BlueprintName = "InverseTriangulation"
             ReferencedContainer = "container:InverseTriangulation.xcodeproj">
          </BuildableReference>

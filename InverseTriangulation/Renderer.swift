@@ -12,13 +12,17 @@ class Renderer: NSObject {
     static var device: MTLDevice!
     static var commandQueue: MTLCommandQueue!
     static var library: MTLLibrary!
+    
     var vertexBuffer: MTLBuffer!
     var pipelineState: MTLRenderPipelineState!
+    
     var timer: Float = 0
+    
     var uniforms = Uniforms()
+    var params = Params()
     
     lazy var cube: Cube = {
-        Cube(device: Renderer.device)
+        Cube(device: Self.device)
     }()
     
     init(metalView: MTKView) {
@@ -76,13 +80,19 @@ extension Renderer: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         let aspect =
         Float(view.bounds.width) / Float(view.bounds.height)
+        
         let projectionMatrix =
         float4x4(
-            projectionFov: Float(150).degreesToRadians,
+            projectionFov: Float(100).degreesToRadians,
             near: 0.1,
             far: 100,
             aspect: aspect)
+        
         uniforms.projectionMatrix = projectionMatrix
+        
+        params.width = UInt32(size.width)
+        params.height = UInt32(size.height)
+
     }
     
     func draw(in view: MTKView) {
@@ -97,7 +107,7 @@ extension Renderer: MTKViewDelegate {
         
         timer += 0.005
         uniforms.viewMatrix = float4x4(translation: [0,0,-3]).inverse
-        cube.position.y = -0.6
+//        cube.position.y = -0.6
         cube.rotation.y = tan(timer)
         uniforms.modelMatrix = cube.transform.modelMatrix
         
@@ -105,6 +115,11 @@ extension Renderer: MTKViewDelegate {
             &uniforms,
             length: MemoryLayout<Uniforms>.stride,
             index: 11)
+        
+        renderEncoder.setFragmentBytes(
+          &params,
+          length: MemoryLayout<Uniforms>.stride,
+          index: 12)
         
         renderEncoder.setRenderPipelineState(pipelineState)
         
