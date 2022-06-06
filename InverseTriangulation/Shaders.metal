@@ -1,6 +1,6 @@
 //
 //  Shaders.metal
-//  MetalGraphicEngine
+//  InverseTriangulation
 //
 //  Created by Ertem Biyik on 05.06.2022.
 //

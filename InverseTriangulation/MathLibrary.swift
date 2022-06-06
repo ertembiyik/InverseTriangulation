@@ -1,6 +1,6 @@
 //
 //  MathLibrary.swift
-//  MetalGraphicEngine
+//  InverseTriangulation
 //
 //  Created by Ertem Biyik on 06.06.2022.
 //

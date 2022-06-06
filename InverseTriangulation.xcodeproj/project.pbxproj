@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211332DB284BDFA60070FD15 /* MetalGraphicEngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332DA284BDFA60070FD15 /* MetalGraphicEngineApp.swift */; };
+		211332DB284BDFA60070FD15 /* InverseTriangulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332DA284BDFA60070FD15 /* InverseTriangulationApp.swift */; };
 		211332DD284BDFA60070FD15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211332DC284BDFA60070FD15 /* ContentView.swift */; };
 		211332DF284BDFA80070FD15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211332DE284BDFA80070FD15 /* Assets.xcassets */; };
 		211332E2284BDFA80070FD15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211332E1284BDFA80070FD15 /* Preview Assets.xcassets */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		211332D7284BDFA60070FD15 /* MetalGraphicEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalGraphicEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		211332DA284BDFA60070FD15 /* MetalGraphicEngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalGraphicEngineApp.swift; sourceTree = "<group>"; };
+		211332D7284BDFA60070FD15 /* InverseTriangulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InverseTriangulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		211332DA284BDFA60070FD15 /* InverseTriangulationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InverseTriangulationApp.swift; sourceTree = "<group>"; };
 		211332DC284BDFA60070FD15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		211332DE284BDFA80070FD15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211332E1284BDFA80070FD15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		211332CE284BDFA60070FD15 = {
 			isa = PBXGroup;
 			children = (
-				211332D9284BDFA60070FD15 /* MetalGraphicEngine */,
+				211332D9284BDFA60070FD15 /* InverseTriangulation */,
 				211332D8284BDFA60070FD15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,15 +58,15 @@
 		211332D8284BDFA60070FD15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				211332D7284BDFA60070FD15 /* MetalGraphicEngine.app */,
+				211332D7284BDFA60070FD15 /* InverseTriangulation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		211332D9284BDFA60070FD15 /* MetalGraphicEngine */ = {
+		211332D9284BDFA60070FD15 /* InverseTriangulation */ = {
 			isa = PBXGroup;
 			children = (
-				211332DA284BDFA60070FD15 /* MetalGraphicEngineApp.swift */,
+				211332DA284BDFA60070FD15 /* InverseTriangulationApp.swift */,
 				211332DC284BDFA60070FD15 /* ContentView.swift */,
 				211332F0284D35E80070FD15 /* VertexDescriptor.swift */,
 				211332E8284BDFC70070FD15 /* Renderer.swift */,
@@ -79,7 +79,7 @@
 				211332DE284BDFA80070FD15 /* Assets.xcassets */,
 				211332E0284BDFA80070FD15 /* Preview Content */,
 			);
-			path = MetalGraphicEngine;
+			path = InverseTriangulation;
 			sourceTree = "<group>";
 		};
 		211332E0284BDFA80070FD15 /* Preview Content */ = {
@@ -93,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		211332D6284BDFA60070FD15 /* MetalGraphicEngine */ = {
+		211332D6284BDFA60070FD15 /* InverseTriangulation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 211332E5284BDFA80070FD15 /* Build configuration list for PBXNativeTarget "MetalGraphicEngine" */;
+			buildConfigurationList = 211332E5284BDFA80070FD15 /* Build configuration list for PBXNativeTarget "InverseTriangulation" */;
 			buildPhases = (
 				211332D3284BDFA60070FD15 /* Sources */,
 				211332D4284BDFA60070FD15 /* Frameworks */,
@@ -105,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = MetalGraphicEngine;
+			name = InverseTriangulation;
 			productName = MetalGraphicEngine;
-			productReference = 211332D7284BDFA60070FD15 /* MetalGraphicEngine.app */;
+			productReference = 211332D7284BDFA60070FD15 /* InverseTriangulation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 211332D2284BDFA60070FD15 /* Build configuration list for PBXProject "MetalGraphicEngine" */;
+			buildConfigurationList = 211332D2284BDFA60070FD15 /* Build configuration list for PBXProject "InverseTriangulation" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				211332D6284BDFA60070FD15 /* MetalGraphicEngine */,
+				211332D6284BDFA60070FD15 /* InverseTriangulation */,
 			);
 		};
 /* End PBXProject section */
@@ -166,7 +166,7 @@
 				211332DD284BDFA60070FD15 /* ContentView.swift in Sources */,
 				211332E9284BDFC70070FD15 /* Renderer.swift in Sources */,
 				211332F1284D35E80070FD15 /* VertexDescriptor.swift in Sources */,
-				211332DB284BDFA60070FD15 /* MetalGraphicEngineApp.swift in Sources */,
+				211332DB284BDFA60070FD15 /* InverseTriangulationApp.swift in Sources */,
 				211332F9284E98050070FD15 /* Transform.swift in Sources */,
 				211332ED284C0DDF0070FD15 /* Shaders.metal in Sources */,
 			);
@@ -231,7 +231,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = MetalGraphicEngine/Common.h;
+				SWIFT_OBJC_BRIDGING_HEADER = InverseTriangulation/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -285,7 +285,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = MetalGraphicEngine/Common.h;
+				SWIFT_OBJC_BRIDGING_HEADER = InverseTriangulation/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -298,7 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MetalGraphicEngine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"InverseTriangulation/Preview Content\"";
 				DEVELOPMENT_TEAM = MD55Y22MQS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -312,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ertembiyik.MetalGraphicEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ertembiyik.InverseTriangulation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MetalGraphicEngine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"InverseTriangulation/Preview Content\"";
 				DEVELOPMENT_TEAM = MD55Y22MQS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -341,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ertembiyik.MetalGraphicEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ertembiyik.InverseTriangulation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -352,7 +352,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		211332D2284BDFA60070FD15 /* Build configuration list for PBXProject "MetalGraphicEngine" */ = {
+		211332D2284BDFA60070FD15 /* Build configuration list for PBXProject "InverseTriangulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				211332E3284BDFA80070FD15 /* Debug */,
@@ -361,7 +361,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		211332E5284BDFA80070FD15 /* Build configuration list for PBXNativeTarget "MetalGraphicEngine" */ = {
+		211332E5284BDFA80070FD15 /* Build configuration list for PBXNativeTarget "InverseTriangulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				211332E6284BDFA80070FD15 /* Debug */,

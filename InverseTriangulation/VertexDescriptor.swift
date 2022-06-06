@@ -1,6 +1,6 @@
 //
-//   VertexDescriptor.swift
-//  MetalGraphicEngine
+//  VertexDescriptor.swift
+//  InverseTriangulation
 //
 //  Created by Ertem Biyik on 05.06.2022.
 //

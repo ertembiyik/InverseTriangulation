@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  MetalGraphicEngine
+//  InverseTriangulation
 //
 //  Created by Ertem Biyik on 04.06.2022.
 //
