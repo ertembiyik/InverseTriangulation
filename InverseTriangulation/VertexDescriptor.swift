@@ -14,15 +14,22 @@ extension MTLVertexDescriptor {
         vertexDescriptor.attributes[0].offset = 0
         vertexDescriptor.attributes[0].bufferIndex = 0
         
-        let stride = MemoryLayout<Float>.stride * 3
+        var stride = MemoryLayout<Float>.stride * 3
         vertexDescriptor.layouts[0].stride = stride
+        
+//        vertexDescriptor.attributes[1].format = .float3
+//        vertexDescriptor.attributes[1].offset = 0
+//        vertexDescriptor.attributes[1].bufferIndex = 1
+//        vertexDescriptor.layouts[1].stride =
+//          MemoryLayout<simd_float3>.stride
         
         vertexDescriptor.attributes[1].format = .float3
         vertexDescriptor.attributes[1].offset = 0
         vertexDescriptor.attributes[1].bufferIndex = 1
-        vertexDescriptor.layouts[1].stride =
-          MemoryLayout<simd_float3>.stride
         
+        stride = MemoryLayout<float3>.stride
+        vertexDescriptor.layouts[1].stride = stride
+
         return vertexDescriptor
     }
 }

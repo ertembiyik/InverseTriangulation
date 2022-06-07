@@ -34,6 +34,7 @@
 		211332F8284E98050070FD15 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		211332FA284E98AC0070FD15 /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
 		211332FC284E98C90070FD15 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2113331A284F645A0070FD15 /* ShaderDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 				211332EE284C26920070FD15 /* Cube.swift */,
 				211332FA284E98AC0070FD15 /* MathLibrary.swift */,
 				211332FC284E98C90070FD15 /* Common.h */,
+				2113331A284F645A0070FD15 /* ShaderDefs.h */,
 				211332EA284C072B0070FD15 /* MetalView.swift */,
 				211332EC284C0DDF0070FD15 /* Shaders.metal */,
 				211332DE284BDFA80070FD15 /* Assets.xcassets */,

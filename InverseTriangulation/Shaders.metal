@@ -7,18 +7,21 @@
 
 #include <metal_stdlib>
 #import "Common.h"
+#import "ShaderDefs.h"
 using namespace metal;
 
 struct VertexIn {
     float4 position [[attribute(0)]];
-    float4 color [[attribute(1)]];
+    float3 normal [[attribute(1)]];
+//    float4 color [[attribute(1)]];
 };
 
-struct VertexOut {
-    float4 position [[position]];
-    float4 color;
-    float pointSize [[point_size]];
-};
+//struct VertexOut {
+//    float4 position [[position]];
+//    float4 color;
+//    float3 normal;
+//    float pointSize [[point_size]];
+//};
 
 vertex VertexOut vertex_main(VertexIn in [[stage_in]], constant Uniforms &uniforms [[buffer(11)]]) {
     
@@ -28,7 +31,8 @@ vertex VertexOut vertex_main(VertexIn in [[stage_in]], constant Uniforms &unifor
     
     VertexOut out {
         .position = position,
-        .color = in.color
+//        .color = in.color
+        .normal = in.normal
     };
     
     return out;
@@ -63,8 +67,8 @@ fragment float4 fragment_main(constant Params &params [[buffer(12)]], VertexOut 
 //    float3 color = mix(red, blue, 0.3);
 //    return float4(color, 1);
     
-    float3 color = normalize(in.position.xyz);
-    return float4(color, 1);
-
+//    float3 color = normalize(in.position.xyz);
+//    return float4(color, 1);
     
+    return float4(in.normal, 1);
 }

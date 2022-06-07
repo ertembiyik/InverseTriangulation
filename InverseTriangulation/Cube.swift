@@ -22,8 +22,8 @@ struct Cube: Transformable {
     ]
     
     var indices: [UInt16] = [
-        0,1,2,  0,2,3, // Front
-        4,5,7,  4,6,7, // Back
+        0,2,1,  0,2,3, // Front
+        4,5,6,  4,6,7, // Back
         4,1,0,  4,1,5, // Left
         7,2,3,  7,2,6, // Right
         4,0,3,  4,3,7, // Top

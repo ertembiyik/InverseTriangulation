@@ -15,6 +15,7 @@ class Renderer: NSObject {
     
     var vertexBuffer: MTLBuffer!
     var pipelineState: MTLRenderPipelineState!
+    let depthStencilState: MTLDepthStencilState?
     
     var timer: Float = 0
     
@@ -50,6 +51,10 @@ class Renderer: NSObject {
         pipelineDescriptor.vertexDescriptor =
         MTLVertexDescriptor.defaultLayout
         
+        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
+        
+        depthStencilState = Renderer.buildDepthStencilState()
+        
         do {
             pipelineState =
             try device.makeRenderPipelineState(
@@ -67,12 +72,26 @@ class Renderer: NSObject {
             blue: 0.8,
             alpha: 1.0)
         
+        metalView.depthStencilPixelFormat = .depth32Float
+        
         metalView.delegate = self
         
         uniforms.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
         
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)
     }
+    
+    static func buildDepthStencilState() -> MTLDepthStencilState? {
+    // 1
+      let descriptor = MTLDepthStencilDescriptor()
+    // 2
+      descriptor.depthCompareFunction = .less
+    // 3
+      descriptor.isDepthWriteEnabled = true
+      return Renderer.device.makeDepthStencilState(
+        descriptor: descriptor)
+    }
+
 }
 
 extension Renderer: MTKViewDelegate {
@@ -104,6 +123,8 @@ extension Renderer: MTKViewDelegate {
                     descriptor: descriptor) else {
             return
         }
+        
+        renderEncoder.setDepthStencilState(depthStencilState)
         
         timer += 0.005
         uniforms.viewMatrix = float4x4(translation: [0,0,-3]).inverse
