@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219C16EB2850CC19003A43A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C16EA2850CC19003A43A7 /* ContentView.swift */; };
+		219C16EC2850CC19003A43A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219C16EA2850CC19003A43A7 /* ContentView.swift */; };
 		21D690792850C687004ADF3F /* InverseTriangulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D690692850C683004ADF3F /* InverseTriangulationApp.swift */; };
 		21D6907A2850C687004ADF3F /* InverseTriangulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D690692850C683004ADF3F /* InverseTriangulationApp.swift */; };
 		21D6907D2850C687004ADF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D6906B2850C687004ADF3F /* Assets.xcassets */; };
@@ -19,8 +21,6 @@
 		21D690962850C6B2004ADF3F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908B2850C6B2004ADF3F /* MetalView.swift */; };
 		21D690972850C6B2004ADF3F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908C2850C6B2004ADF3F /* Cube.swift */; };
 		21D690982850C6B2004ADF3F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908C2850C6B2004ADF3F /* Cube.swift */; };
-		21D690992850C6B2004ADF3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908D2850C6B2004ADF3F /* ContentView.swift */; };
-		21D6909A2850C6B2004ADF3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908D2850C6B2004ADF3F /* ContentView.swift */; };
 		21D6909B2850C6B2004ADF3F /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908E2850C6B2004ADF3F /* Transform.swift */; };
 		21D6909C2850C6B2004ADF3F /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908E2850C6B2004ADF3F /* Transform.swift */; };
 		21D6909D2850C6B2004ADF3F /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D6908F2850C6B2004ADF3F /* Renderer.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		219C16EA2850CC19003A43A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		21D690692850C683004ADF3F /* InverseTriangulationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InverseTriangulationApp.swift; sourceTree = "<group>"; };
 		21D6906B2850C687004ADF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D690702850C687004ADF3F /* InverseTriangulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InverseTriangulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +42,6 @@
 		21D6908A2850C6B2004ADF3F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		21D6908B2850C6B2004ADF3F /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		21D6908C2850C6B2004ADF3F /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
-		21D6908D2850C6B2004ADF3F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../MetalGraphicEngine/InverseTriangulation/ContentView.swift; sourceTree = "<group>"; };
 		21D6908E2850C6B2004ADF3F /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		21D6908F2850C6B2004ADF3F /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		21D690902850C6B2004ADF3F /* VertexDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				21D690692850C683004ADF3F /* InverseTriangulationApp.swift */,
-				21D6908D2850C6B2004ADF3F /* ContentView.swift */,
 				21D6908C2850C6B2004ADF3F /* Cube.swift */,
+				219C16EA2850CC19003A43A7 /* ContentView.swift */,
 				21D690882850C6B2004ADF3F /* MathLibrary.swift */,
 				21D6908B2850C6B2004ADF3F /* MetalView.swift */,
 				21D6908F2850C6B2004ADF3F /* Renderer.swift */,
@@ -210,10 +210,10 @@
 			files = (
 				21D6909F2850C6B2004ADF3F /* VertexDescriptor.swift in Sources */,
 				21D690912850C6B2004ADF3F /* Shaders.metal in Sources */,
-				21D690992850C6B2004ADF3F /* ContentView.swift in Sources */,
 				21D690972850C6B2004ADF3F /* Cube.swift in Sources */,
 				21D690952850C6B2004ADF3F /* MetalView.swift in Sources */,
 				21D690792850C687004ADF3F /* InverseTriangulationApp.swift in Sources */,
+				219C16EB2850CC19003A43A7 /* ContentView.swift in Sources */,
 				21D6909B2850C6B2004ADF3F /* Transform.swift in Sources */,
 				21D6909D2850C6B2004ADF3F /* Renderer.swift in Sources */,
 				21D690932850C6B2004ADF3F /* MathLibrary.swift in Sources */,
@@ -226,10 +226,10 @@
 			files = (
 				21D690A02850C6B2004ADF3F /* VertexDescriptor.swift in Sources */,
 				21D690922850C6B2004ADF3F /* Shaders.metal in Sources */,
-				21D6909A2850C6B2004ADF3F /* ContentView.swift in Sources */,
 				21D690982850C6B2004ADF3F /* Cube.swift in Sources */,
 				21D690962850C6B2004ADF3F /* MetalView.swift in Sources */,
 				21D6907A2850C687004ADF3F /* InverseTriangulationApp.swift in Sources */,
+				219C16EC2850CC19003A43A7 /* ContentView.swift in Sources */,
 				21D6909C2850C6B2004ADF3F /* Transform.swift in Sources */,
 				21D6909E2850C6B2004ADF3F /* Renderer.swift in Sources */,
 				21D690942850C6B2004ADF3F /* MathLibrary.swift in Sources */,
@@ -289,6 +289,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,6 +344,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
