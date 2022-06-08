@@ -1,8 +1,8 @@
 //
 //  InverseTriangulationApp.swift
-//  InverseTriangulation
+//  Shared
 //
-//  Created by Ertem Biyik on 04.06.2022.
+//  Created by Ertem Biyik on 08.06.2022.
 //
 
 import SwiftUI
