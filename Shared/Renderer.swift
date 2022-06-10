@@ -18,6 +18,7 @@ class Renderer: NSObject {
     let depthStencilState: MTLDepthStencilState?
     
     var timer: Float = 0
+    var k: Float = 0
     
     var uniforms = Uniforms()
     var params = Params()
@@ -127,9 +128,10 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setDepthStencilState(depthStencilState)
         
         timer += 0.005
-        uniforms.viewMatrix = float4x4(translation: [0,0,-3]).inverse
+        uniforms.viewMatrix = float4x4(translation: [0,-0.5,-3]).inverse
 //        cube.position.y = -0.6
-        cube.rotation.y = tan(timer)
+        cube.rotation.y = 2 * sin(timer)
+        k+=1
         uniforms.modelMatrix = cube.transform.modelMatrix
         
         renderEncoder.setVertexBytes(

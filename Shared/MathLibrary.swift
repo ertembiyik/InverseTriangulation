@@ -23,6 +23,15 @@ extension Float {
   }
 }
 
+func pointBetweenTwoDots(firstDot: [Float], secondDot:[Float]) -> [Float] {
+    
+    let x = (firstDot[0] + secondDot[0]) / 2
+    let y = (firstDot[1] + secondDot[1]) / 2
+    let z = (firstDot[2] + secondDot[2]) / 2
+    
+    return [x, y, z]
+}
+
 // MARK: - float4
 extension float4x4 {
   // MARK: - Translate
